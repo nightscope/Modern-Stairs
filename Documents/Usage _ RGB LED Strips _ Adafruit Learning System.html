@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://learn.adafruit.com/rgb-led-strips/usage -->
+<html lang="en-US" class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js-ready"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="mask-icon" href="https://learn.adafruit.com/assets/adafruit_favicon-d77f206e6cc65b40101b6e5b8987f7c35cb6a283ea73c0adad50c37f7347c61a.svg" color="#000000">
+<link rel="shortcut icon" type="image/x-icon" href="https://learn.adafruit.com/assets/favicon-0c79bd4bc582e6d4cf3afe417bd1e28120527c09d92c08a6464690c5bf6b85f4.ico">
+<title>Usage | RGB LED Strips | Adafruit Learning System</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="gHPuLrFLBLwjJfk+MgkdH/qSnvO6f62L/DwM4i3Y3OeujFahc+EErpb4SkgwCZb7f8o6Cz7TXm2sdhlOg6gh6A==">
+<link rel="alternate" type="application/atom+xml" title="ATOM" href="https://learn.adafruit.com/feed">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://learn.adafruit.com/feed.rss">
+<link rel="stylesheet" media="screen" href="./Usage _ RGB LED Strips _ Adafruit Learning System_files/fonts.css">
+<link rel="stylesheet" media="screen" href="./Usage _ RGB LED Strips _ Adafruit Learning System_files/application-69a1b9a706ca060dbbb202944097c7e3005fad19019ad9a2372524c7d9d53932.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@adafruit">
+<meta name="twitter:title" content="RGB LED Strips">
+<meta name="twitter:description" content="Glowy goodness!">
+<meta name="twitter:image:src" content="https://learn.adafruit.comhttps://cdn-learn.adafruit.com/guides/images/000/000/151/medium800/rgbstrip.jpg">
+<meta name="twitter:domain" content="https://learn.adafruit.com">
+<link rel="canonical" href="https://learn.adafruit.com/rgb-led-strips/usage">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<!--[if lte IE 9]>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  <![endif]-->
+<style type="text/css">
+:root #main-content > [style="padding:10px 0 0 0 !important;"]
+{ display: none !important; }</style><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+<body class="application pages show">
+<div id="outer-wrapper">
+<div id="inner-wrapper">
+<div id="messaging-wrapper" data-load="https://www.adafruit.com/api/multi_message.php"></div>
+<header id="adafruit-header">
+<div id="small-header-content" class="container visible-xs">
+<a id="small-header-menu-button" class="menu-link" href="https://learn.adafruit.com/rgb-led-strips/usage#small-header-nav">
+<i class="fa fa-bars"> </i>
+</a>
+<div class="small-header-logo">
+<a href="https://www.adafruit.com/">
+<img id="small-logo" height="50" width="50" alt="Adafruit Logo" title="Adafruit Logo" src="./Usage _ RGB LED Strips _ Adafruit Learning System_files/adafruit_logo_small.png">
+</a> </div>
+<a class="small-header-cart" href="https://www.adafruit.com/shopping_cart">
+<span class="small-cart-count">0</span>
+<i class="fa fa-shopping-cart"></i>
+</a> </div>
+<nav id="small-header-nav" role="navigation" class="visible-xs">
+<div class="block">
+<ul>
+<li>
+<div id="small-search-wrapper">
+<div id="small-search-inner-wrapper">
+<form action="https://learn.adafruit.com/search" method="get">
+<label for="mobile-search" style="display:none;">Search</label>
+<input id="mobile-search" type="text" name="q" placeholder="Search Adafruit">
+<i class="fa fa-search"></i>
+</form>
+</div>
+</div>
+</li>
+<li>
+<a href="https://www.adafruit.com/categories">SHOP</a>
+</li>
+<li>
+<a href="https://blog.adafruit.com/">BLOG</a>
+</li>
+<li>
+<a href="https://learn.adafruit.com/">LEARN</a>
+</li>
+<li>
+<a href="https://forums.adafruit.com/">FORUMS</a>
+</li>
+<li>
+<a href="https://www.youtube.com/adafruit">VIDEOS</a>
+</li>
+<li>
+<a href="https://learn.adafruit.com/users/sign_in">SIGN IN</a>
+</li>
+<li>
+<a class="close-btn" id="small-nav-close-button" href="https://learn.adafruit.com/rgb-led-strips/usage#top">CLOSE MENU</a>
+</li>
+</ul>
+</div>
+</nav>
+<div id="header-content" class="container hidden-xs">
+<div id="header-profile">
+<a id="header-cart" href="https://www.adafruit.com/shopping_cart">0 Items <i class="fa fa-shopping-cart"></i></a> <div id="account">
+<a href="https://learn.adafruit.com/users/sign_in">Sign In</a>
+</div>
+<div id="search-wrapper">
+<form action="https://learn.adafruit.com/search" method="get">
+<label for="search" style="display:none;">Search</label>
+<input id="search" type="text" name="q" autocomplete="off" data-page="" ,="" data-app-id="W9DMM4OTH0" data-app-key="e613bcda3453b9ef887e2724362f9e57" data-app-index="learn_guides_production" data-app-uri="https://learn.adafruit.com">
+          <i class="fa fa-search"></i>
+          <input type="submit" style="visibility: hidden; position: fixed;">
+        </form>
+      </div>
+    </div>
+    <div id="navigation">
+      <a href="https://www.adafruit.com/">
+        <img id="logo" width="172" height="60" alt="Adafruit Logo" title="Adafruit Logo" src="./Usage _ RGB LED Strips _ Adafruit Learning System_files/logo_2x.png">
+</a>      <nav class="hover-menu">
+  <ul>
+    <li id="nav-shop" data-load="https://www.adafruit.com/api/flyouts/shop.html"><a href="https://www.adafruit.com/">SHOP</a>
+    </li>
+    <li id="nav-blog" data-load="https://blog.adafruit.com/adafruit-blog-flyouts"><a href="https://blog.adafruit.com/">BLOG</a>
+    </li>
+    <li id="nav-learn" data-load="https://learn.adafruit.com/api/hover-menu/flyouts/learn.html"><a href="https://learn.adafruit.com/">LEARN</a>
+    </li>
+    <li id="nav-forums"><a href="https://forums.adafruit.com/">FORUMS</a>
+    </li>
+    <li id="nav-forums"><a href="https://www.youtube.com/adafruit">VIDEOS</a>
+    </li>
+  </ul>
+</nav>
+
+    </div>
+  </div>
+</header>
+
+      <div id="main-content">
+        <div id="page-wrapper">
+		<div id="content-wrapper" class="container" data-page-id="812" data-guide-id="151">
+			<div class="row">
+				<div class="sidebar-left-wrapper hidden-phone hidden-tablet col-lg-two-and-half col-md-3 col-sm-4 col-xs-12">
+					<div class="sidebar-left-content affix" data-clampedwidth=".sidebar-left-wrapper" style="width: 255px;">
+							<nav class="sidebar-left">
+		<div class="title-bar">
+				  <img src="./Usage _ RGB LED Strips _ Adafruit Learning System_files/rgbstrip.jpg" class="img img-responsive">
+
+		    <div class="title">
+			    <h1><a href="https://learn.adafruit.com/rgb-led-strips/overview">RGB LED Strips</a></h1>
+			    <span class="tagline"><a href="https://learn.adafruit.com/rgb-led-strips/overview">Glowy goodness!</a></span>
+			  </div>
+	  </div>
+	  <ul class="page-parent nav">
+			  <li class="">
+      <a class="sidebar-parent" href="https://learn.adafruit.com/rgb-led-strips/overview">Overview</a>
+      <span class="page-draft-status">
+      </span>
+</li>
+  <li class="">
+      <a class="sidebar-parent" href="https://learn.adafruit.com/rgb-led-strips/schematic">Schematic</a>
+      <span class="page-draft-status">
+      </span>
+</li>
+  <li class="">
+      <a class="sidebar-parent" href="https://learn.adafruit.com/rgb-led-strips/current-draw">Current Draw</a>
+      <span class="page-draft-status">
+      </span>
+</li>
+  <li class="">
+      <a class="sidebar-parent" href="https://learn.adafruit.com/rgb-led-strips/wiring">Wiring</a>
+      <span class="page-draft-status">
+      </span>
+</li>
+  <li class="active">
+      <a class="sidebar-parent" href="https://learn.adafruit.com/rgb-led-strips/usage">Usage</a>
+      <span class="page-draft-status">
+      </span>
+</li>
+  <li class="">
+      <a class="sidebar-parent" href="https://learn.adafruit.com/rgb-led-strips/example-code">Example Code</a>
+      <span class="page-draft-status">
+      </span>
+</li>
+  <li class="">
+      <a href="http://forums.adafruit.com/">Support Forums<i class="fa fa-external-link"></i></a>
+</li>
+
+			<li class="single-page-spacer"></li>
+	      <li class="single-page-link"><a href="https://learn.adafruit.com/rgb-led-strips?view=all">Single Page</a></li>
+
+				<li><a href="https://cdn-learn.adafruit.com/downloads/pdf/rgb-led-strips.pdf">Download PDF</a></li>
+	  </ul>
+	</nav>
+	  <header class="sidebar-meta hidden-xs">
+    <h4>Contributors</h4>
+      <div><a href="https://learn.adafruit.com/users/adafruit2">lady ada</a></div>
+      <div><a href="https://learn.adafruit.com/users/tcooper">Tyler Cooper</a></div>
+  </header>
+
+	  <header class="sidebar-meta hidden-xs">
+    <a class="feedback-link" title="Feedback? Corrections?" rel="nofollow" data-remote="true" data-method="get" href="https://learn.adafruit.com/pages/812/settings_modal">
+          Feedback?  Corrections?
+</a>  </header>
+
+
+					</div>
+				</div>
+					<article class="col-lg-7 col-md-6 col-sm-8 col-xs-12">
+					<div id="categories">
+    <span class="category child-category">
+      <a href="https://learn.adafruit.com/category/leds">LEDS</a>
+      <span class="category-link-spacer">/</span>
+    <a href="https://learn.adafruit.com/category/led-strips">LED STRIPS</a>
+  </span>
+
+  
+  <span id="guide-favorite">
+  <a class="favorites-link category right red" title="" data-toggle="tooltip" data-placement="left" data-remote="true" rel="nofollow" data-method="post" href="https://learn.adafruit.com/guides/151/favorites.js" data-original-title="Favorite this guide?">
+    <i class="fa fa-heart-o"></i>
+</a></span>
+</div>
+
+					<div class="content">
+							<div class="page-title-wrapper">
+								<h1 class="headline">
+									<span id="usage">Usage</span>
+								</h1>
+								    <div class="author">by
+      <a href="https://learn.adafruit.com/users/tcooper">
+          <span class="name">Tyler Cooper</span>
+</a>    </div>
+
+							</div>
+							<div class="page-content">
+									    <div class="row-fluid build-text">
+  
+      
+      
+      <p>Because these LED strips are very simple, we can easily use them with any microcontroller. We suggest&nbsp;using PWM dimming techniques to control the strip. Since each 'LED' pin may end up requiring an Amp or more to sink to ground, power transistors are <strong>required</strong>! Don't try to connect the pins directly to your everyday microcontroller, they will burn out and/or not work.<br><br>You can use any power NPN or N-Channel MOSFET, make sure the transistor is rated to be able to pass as much current as you need. For example, since we draw about 0.2Amps per channel per meter, if you have a 5 meter strip you will need to pass up to 1 Ampere per transistor. Get the beefy "TO-220" packages, not the dinky little guys. Make sure they look like this:</p>
+    
+    
+    
+</div>
+
+      <div class="row-fluid build-image">
+    <a href="https://learn.adafruit.com/assets/2691">
+        <img class="2691-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/002/691/medium260/led_strips_7805_t.jpg?1396785811 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/002/691/medium640/led_strips_7805_t.jpg?1396785811 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/002/691/medium800/led_strips_7805_t.jpg?1396785811 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/002/691/large1024/led_strips_7805_t.jpg?1396785811 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Usage _ RGB LED Strips _ Adafruit Learning System_files/led_strips_7805_t.jpg" alt="led_strips_7805_t.jpg">
+
+      <span class="image-expand" style="display: none;"><i class="fa fa-search-plus"></i></span>
+</a>  </div>
+
+    <div class="row-fluid build-text">
+  <p>For basic, low-cost usage we suggest using <a href="http://www.adafruit.com/partfinder/transistors#mosfet">N-channel MOSFETs</a> such as the <a href="https://www.adafruit.com/product/355">IRLB8721</a> - they are very popular and inexpensive and work with 3.3V or 5V logic. If you can't get those, <a href="https://www.adafruit.com/products/976">TIP120</a> are also good but there is more voltage loss in a transistor than in a MOSFET which is why we suggest those first (less heat loss, more light!)<br><br>This diagram shows connecting up with N-Channel MOSFETs where the Gate is pin 1, the Drain is pin 2 and the Source is pin 3<br><br>The <strong>IRLB8721</strong>'s can handle up to <strong>16 Amps</strong> of continuous current - so that's at least 750 LEDs, and if you don't have them all on bright white, 1500 LEDs. You may need to heat sink depending on the continuous/overall power draw/dissipation</p>
+</div>
+
+    <div class="row-fluid build-alert alert-danger">
+  <div class="alert">
+    <i class="fa fa-exclamation-circle"></i>
+    
+        
+        
+        
+        For longer strips requiring more than 1 Amp, wire the power directly to the strip, then run power and ground wires back to the Arduino.
+      
+      
+  </div>
+</div>
+
+      <div class="row-fluid build-image">
+    <a href="https://learn.adafruit.com/assets/2692">
+        <img class="2692-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/002/692/medium260/led_strips_ledstripfet.gif?1448059609 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/002/692/medium640/led_strips_ledstripfet.gif?1448059609 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/002/692/medium800/led_strips_ledstripfet.gif?1448059609 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/002/692/large1024/led_strips_ledstripfet.gif?1448059609 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Usage _ RGB LED Strips _ Adafruit Learning System_files/led_strips_ledstripfet.gif" alt="led_strips_ledstripfet.gif">
+
+      <span class="image-expand" style="display: inline;"><i class="fa fa-search-plus"></i></span>
+</a>  </div>
+
+    <div class="row-fluid build-text">
+  
+      
+      
+      
+      
+      
+      <span>This diagram shows connecting up with power NPN transistors such as TIP120, where Base is pin 1, Collector is pin 2 and Emitter is pin 3. Its very similar except this time we have 100-220 ohm resistors between the PWM output pin and the base.</span>
+    
+    
+    
+    
+    
+    
+</div>
+
+    <div class="row-fluid build-alert alert-danger">
+  <div class="alert">
+    <i class="fa fa-exclamation-circle"></i>
+    
+        
+        
+        
+        For longer strips requiring more than 1A, wire power directly to the strip, then run power and ground wires back to the Arduino.
+      
+      
+  </div>
+</div>
+
+      <div class="row-fluid build-image">
+    <a href="https://learn.adafruit.com/assets/2693">
+        <img class="2693-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/002/693/medium260/led_strips_ledstripbjt.gif?1448059603 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/002/693/medium640/led_strips_ledstripbjt.gif?1448059603 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/002/693/medium800/led_strips_ledstripbjt.gif?1448059603 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/002/693/large1024/led_strips_ledstripbjt.gif?1448059603 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Usage _ RGB LED Strips _ Adafruit Learning System_files/led_strips_ledstripbjt.gif" alt="led_strips_ledstripbjt.gif">
+
+      <span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a>  </div>
+
+    <div class="row-fluid build-text">
+  
+      
+      
+      
+      
+      Connect a 9-12V power supply to the Arduino so that <strong>Vin</strong> supplies the high voltage to the LED strip. If you want, you can also just use a separate wire that connects to a power supply that provides about +12V. Make sure to connect the ground of that supply to the ground of the Arduino/MOSFETs!<br><br>TIP120's can handle up to <b>5 Amps</b> of continuous current - so that's at least 250 LEDs, and if you don't have them all on bright white, 500 LEDs.<br>
+    
+    
+    
+    
+</div>
+
+
+								<div class="page-navigation">
+										<a class="previous-page" href="https://learn.adafruit.com/rgb-led-strips/wiring">
+											<i class="fa fa-chevron-left"></i>WIRING
+</a>										<a class="next-page" href="https://learn.adafruit.com/rgb-led-strips/example-code">
+											EXAMPLE CODE<i class="fa fa-chevron-right"></i>
+</a>									<div class="clear"></div>
+								</div>
+								<span class="page-last-updated">Last updated on 2017-04-20 at 05.08.22 PM</span>
+									<span class="page-last-updated">Published on 2012-11-26 at 04.21.02 PM</span>
+							</div>
+					</div>
+				</article>
+				<div class="col-lg-two-and-half col-md-3 hidden-sm hidden-xs">
+  <header class="sidebar-right">
+    <div class="sidebar-right-content">
+      
+        <div class="product-wrapper">
+    <div class="product-image">
+      <a href="https://www.adafruit.com/product/285">
+            <img src="./Usage _ RGB LED Strips _ Adafruit Learning System_files/285-00.jpg" alt="285-00.jpg" height="233" class="img-responsive">
+</a>    </div>
+    <div class="product-details">
+      <div class="product-title">RGB LED weatherproof flexi-strip - 30 LED/m</div>
+      <span class="product-price">$16.00</span>
+        <a id="285-product" class="product-buy" data-pid="285" data-qty="1" data-name="RGB LED weatherproof flexi-strip - 30 LED/m" href="https://www.adafruit.com/product/285">
+          Add To Cart
+</a>    </div>
+  </div>
+  <div class="product-wrapper">
+    <div class="product-image">
+      <a href="https://www.adafruit.com/product/1004">
+            <img src="./Usage _ RGB LED Strips _ Adafruit Learning System_files/1004-03.jpg" alt="1004-03.jpg" height="233" class="img-responsive">
+</a>    </div>
+    <div class="product-details">
+      <div class="product-title">Solderless DotStar and Analog RGB LED Strip Clip Sampler</div>
+      <span class="product-price">$2.95</span>
+        <a id="1004-product" class="product-buy" data-pid="1004" data-qty="1" data-name="Solderless DotStar and Analog RGB LED Strip Clip Sampler" href="https://www.adafruit.com/product/1004">
+          Add To Cart
+</a>    </div>
+  </div>
+  <div class="product-wrapper">
+    <div class="product-image">
+      <a href="https://www.adafruit.com/product/976">
+            <img src="./Usage _ RGB LED Strips _ Adafruit Learning System_files/976-01.jpg" alt="976-01.jpg" height="233" class="img-responsive">
+</a>    </div>
+    <div class="product-details">
+      <div class="product-title">TIP120 Power Darlington Transistors - 3 pack</div>
+      <span class="product-price">$2.50</span>
+        <a id="976-product" class="notify product-buy" data-pid="976" data-qty="1" data-name="TIP120 Power Darlington Transistors - 3 pack" href="https://www.adafruit.com/product/976">OUT OF STOCK (NOTIFY ME)</a>
+    </div>
+  </div>
+  <div class="product-wrapper">
+    <div class="product-image">
+      <a href="https://www.adafruit.com/product/153">
+            <img src="./Usage _ RGB LED Strips _ Adafruit Learning System_files/153-04.jpg" alt="153-04.jpg" height="233" class="img-responsive">
+</a>    </div>
+    <div class="product-details">
+      <div class="product-title">Breadboarding wire bundle</div>
+      <span class="product-price">$4.95</span>
+        <a id="153-product" class="product-buy" data-pid="153" data-qty="1" data-name="Breadboarding wire bundle" href="https://www.adafruit.com/product/153">
+          Add To Cart
+</a>    </div>
+  </div>
+  <div class="product-wrapper">
+    <div class="product-image">
+      <a href="https://www.adafruit.com/product/344">
+            <img src="./Usage _ RGB LED Strips _ Adafruit Learning System_files/344-00.jpg" alt="344-00.jpg" height="233" class="img-responsive">
+</a>    </div>
+    <div class="product-details">
+      <div class="product-title">Heat Shrink Pack</div>
+      <span class="product-price">$4.95</span>
+        <a id="344-product" class="product-buy" data-pid="344" data-qty="1" data-name="Heat Shrink Pack" href="https://www.adafruit.com/product/344">
+          Add To Cart
+</a>    </div>
+  </div>
+  <div class="product-wrapper">
+    <div class="product-image">
+      <a href="https://www.adafruit.com/product/355">
+            <img src="./Usage _ RGB LED Strips _ Adafruit Learning System_files/355-02.jpg" alt="355-02.jpg" height="233" class="img-responsive">
+</a>    </div>
+    <div class="product-details">
+      <div class="product-title">N-channel power MOSFET</div>
+      <span class="product-price">$1.75</span>
+        <a id="355-product" class="product-buy" data-pid="355" data-qty="1" data-name="N-channel power MOSFET" href="https://www.adafruit.com/product/355">
+          Add To Cart
+</a>    </div>
+  </div>
+  <div class="product-wrapper">
+    <div class="product-image">
+      <a href="https://www.adafruit.com/product/2439">
+          <video class="img img-responsive" preload="auto" muted="muted" loop="loop" autoplay="autoplay" poster="https://cdn-shop.adafruit.com/product-videos/640x480/2439-00.jpg" data-video="0">
+            <source src="https://cdn-shop.adafruit.com/product-videos/640x480/2439-00.mp4">
+            <source src="https://cdn-shop.adafruit.com/product-videos/640x480/2439-00.webm" type="video/webm; codecs=vp8,vorbis">
+            <source src="https://cdn-shop.adafruit.com/product-videos/640x480/2439-00.ogv" type="video/ogg; codecs=theora,vorbis">
+            Your browser does not support the video tag.
+          </video>
+</a>    </div>
+    <div class="product-details">
+      <div class="product-title">Analog RGBW LED Strip - RGB plus Warm White - 60 LED/m</div>
+      <span class="product-price">$19.95</span>
+        <a id="2439-product" class="product-buy" data-pid="2439" data-qty="1" data-name="Analog RGBW LED Strip - RGB plus Warm White - 60 LED/m" href="https://www.adafruit.com/product/2439">
+          Add To Cart
+</a>    </div>
+  </div>
+  <div class="product-wrapper">
+    <div class="product-image">
+      <a href="https://www.adafruit.com/product/2440">
+          <video class="img img-responsive" preload="auto" muted="muted" loop="loop" autoplay="autoplay" poster="https://cdn-shop.adafruit.com/product-videos/640x480/2440-00.jpg" data-video="1">
+            <source src="https://cdn-shop.adafruit.com/product-videos/640x480/2440-00.mp4">
+            <source src="https://cdn-shop.adafruit.com/product-videos/640x480/2440-00.webm" type="video/webm; codecs=vp8,vorbis">
+            <source src="https://cdn-shop.adafruit.com/product-videos/640x480/2440-00.ogv" type="video/ogg; codecs=theora,vorbis">
+            Your browser does not support the video tag.
+          </video>
+</a>    </div>
+    <div class="product-details">
+      <div class="product-title">Analog RGBW LED Strip - RGB plus Cool White - 60 LED/m</div>
+      <span class="product-price">$19.95</span>
+        <a id="2440-product" class="product-buy" data-pid="2440" data-qty="1" data-name="Analog RGBW LED Strip - RGB plus Cool White - 60 LED/m" href="https://www.adafruit.com/product/2440">
+          Add To Cart
+</a>    </div>
+  </div>
+
+        <div class="add-all-to-cart-container">
+          <a class="add-all-to-cart" href="https://learn.adafruit.com/rgb-led-strips/usage#" data-multi-add="{&quot;153&quot;:1,&quot;285&quot;:1,&quot;344&quot;:1,&quot;355&quot;:1,&quot;1004&quot;:1,&quot;2439&quot;:1,&quot;2440&quot;:1}">ADD ALL TO CART</a>
+          <div class="add-all-to-cart-progress"></div>
+        </div>
+      <div class="clear"></div>
+    </div>
+  </header>
+</div>
+
+			</div>
+		</div>
+			<div class="related-guides-wrapper container">
+  <div class="row">
+    <div class="related-guides-title col-lg-12">
+      <h2>
+        RELATED GUIDES
+      </h2>
+    </div>
+  </div>
+  <div class="related-guides-content row">
+    	<div class="1591-guide masonry-block col-lg-3 col-md-3 col-sm-4 col-xs-12">
+        <div class="guide-block">
+            <div class="title-bar">
+                    <div class="guide-type new-guide">
+                        <a href="https://learn.adafruit.com/guides/latest">NEW</a>
+                    </div>
+                <div class="title">
+                  <h5>
+                      <a href="https://learn.adafruit.com/n3rfgun">
+                          n3rfgun<br>
+</a>                  </h5>
+                  <div class="tagline">
+                    <a href="https://learn.adafruit.com/n3rfgun">
+                    Hacking the Nerf gun with NeoPixels
+</a>                	</div>
+									    <div class="author">by
+      <a href="https://learn.adafruit.com/users/smcculley">
+          <span class="name">Scott McCulley</span>
+</a>    </div>
+
+                </div>
+            </div>
+						<a href="https://learn.adafruit.com/n3rfgun">
+								<img src="./Usage _ RGB LED Strips _ Adafruit Learning System_files/DSC_4592.jpg" class="img-responsive guide-image" data-standard-image="https://cdn-learn.adafruit.com/guides/images/000/001/591/medium310/DSC_4592.jpg?1487710916" data-mobile-image="https://cdn-learn.adafruit.com/guides/images/000/001/591/medium800/DSC_4592.jpg?1487710916">
+
+</a>            <div class="details">
+
+                <div class="description">
+                    <a href="https://learn.adafruit.com/n3rfgun">
+                        We modified a stock Nerf gun to increase the firing speed, add multiple velocities for the dart, and blinky lights for more excitement in the dark!
+</a>                </div>
+
+            </div>
+
+
+        </div>
+	</div>
+	<div class="419-guide masonry-block col-lg-3 col-md-3 col-sm-4 col-xs-12">
+        <div class="guide-block">
+            <div class="title-bar">
+                    <div class="guide-type featured-guide">
+                        <a href="https://learn.adafruit.com/guides/featured">FEATURED</a>
+                    </div>
+                <div class="title">
+                  <h5>
+                      <a href="https://learn.adafruit.com/3d-printed-animatronic-robot-head">
+                          3D Printed Animatronic Robot Head<br>
+</a>                  </h5>
+                  <div class="tagline">
+                    <a href="https://learn.adafruit.com/3d-printed-animatronic-robot-head">
+                    An entry-level robotics / animatronics project.
+</a>                	</div>
+									    <div class="author">by
+      <a href="https://learn.adafruit.com/users/rjwinscot">
+          <span class="name">Rick Winscot</span>
+</a>    </div>
+
+                </div>
+            </div>
+						<a href="https://learn.adafruit.com/3d-printed-animatronic-robot-head">
+								<img src="./Usage _ RGB LED Strips _ Adafruit Learning System_files/IMG_0268.JPG" class="img-responsive guide-image" data-standard-image="https://cdn-learn.adafruit.com/guides/images/000/000/419/medium310/IMG_0268.JPG?1448301533" data-mobile-image="https://cdn-learn.adafruit.com/guides/images/000/000/419/medium800/IMG_0268.JPG?1448301533">
+
+</a>            <div class="details">
+
+                <div class="description">
+                    <a href="https://learn.adafruit.com/3d-printed-animatronic-robot-head">
+                        Transform a pair of desktop speakers, two servos, and a handful of 3D printed parts into a fully functional animatronic robot head. 
+</a>                </div>
+
+            </div>
+
+
+        </div>
+	</div>
+	<div class="363-guide masonry-block col-lg-3 col-md-3 col-sm-4 col-xs-12">
+        <div class="guide-block">
+            <div class="title-bar">
+                <div class="title">
+                  <h5>
+                      <a href="https://learn.adafruit.com/tap-tempo-trinket">
+                          Tap Tempo Trinket<br>
+</a>                  </h5>
+                  <div class="tagline">
+                    <a href="https://learn.adafruit.com/tap-tempo-trinket">
+                    I got rhythm! I got music!
+</a>                	</div>
+									    <div class="author">by
+      <a href="https://learn.adafruit.com/users/pburgess">
+          <span class="name">Phillip Burgess</span>
+</a>    </div>
+
+                </div>
+            </div>
+						<a href="https://learn.adafruit.com/tap-tempo-trinket">
+								<img src="./Usage _ RGB LED Strips _ Adafruit Learning System_files/tap-trinket.jpg" class="img-responsive guide-image" data-standard-image="https://cdn-learn.adafruit.com/guides/images/000/000/363/medium310/tap-trinket.jpg?1448301412" data-mobile-image="https://cdn-learn.adafruit.com/guides/images/000/000/363/medium800/tap-trinket.jpg?1448301412">
+
+</a>            <div class="details">
+
+                <div class="description">
+                    <a href="https://learn.adafruit.com/tap-tempo-trinket">
+                        This simple beats-per-minute calculator project demonstrates the sort of small, focused device for which the Adafruit Trinket is ideal. We also learn some of the unique challenges of this tiny processor.
+</a>                </div>
+
+            </div>
+
+
+        </div>
+	</div>
+	<div class="152-guide masonry-block col-lg-3 col-md-3 col-sm-4 col-xs-12">
+        <div class="guide-block">
+            <div class="title-bar">
+                    <div class="guide-type featured-guide">
+                        <a href="https://learn.adafruit.com/guides/featured">FEATURED</a>
+                    </div>
+                <div class="title">
+                  <h5>
+                      <a href="https://learn.adafruit.com/piccolo">
+                          Tiny Arduino Music Visualizer<br>
+</a>                  </h5>
+                  <div class="tagline">
+                    <a href="https://learn.adafruit.com/piccolo">
+                    Maximum blinkenlights, minimum effort!
+</a>                	</div>
+									    <div class="author">by
+      <a href="https://learn.adafruit.com/users/pburgess">
+          <span class="name">Phillip Burgess</span>
+</a>    </div>
+
+                </div>
+            </div>
+						<a href="https://learn.adafruit.com/piccolo">
+								<img src="./Usage _ RGB LED Strips _ Adafruit Learning System_files/proto.jpg" class="img-responsive guide-image" data-standard-image="https://cdn-learn.adafruit.com/guides/images/000/000/152/medium310/proto.jpg?1448301071" data-mobile-image="https://cdn-learn.adafruit.com/guides/images/000/000/152/medium800/proto.jpg?1448301071">
+
+</a>            <div class="details">
+
+                <div class="description">
+                    <a href="https://learn.adafruit.com/piccolo">
+                        This easy project combines an Arduino with our microphone amplifier and bicolor LED matrix to create a music visualizer that responds to ambient sound.
+</a>                </div>
+
+            </div>
+
+
+        </div>
+	</div>
+
+  </div>
+</div>
+
+		<div class="footer-spacer"></div>
+</div>
+
+
+
+  <div class="modal fade" id="notify-modal">
+    <div class="modal-dialog">
+      <div class="modal-content">  
+        <div class="modal-header">
+          <a href="https://learn.adafruit.com/rgb-led-strips/usage#" class="close" data-dismiss="modal">×</a>
+          <h5>OUT OF STOCK NOTIFICATION</h5>
+        </div>
+        <div class="modal-body">
+          <p class="notify-modal-form-header"></p>
+          <div class="notify-modal-products"></div>
+          <form id="notify-modal-form" name="back_in_stock_notification">
+            <p class="notify-modal-form-notice"></p>
+            <div class="notify-modal-break"></div>
+            <div class="form-group">
+              <label class="inputLabel" for="name">YOUR NAME</label>
+              <input type="text" size="25" maxlength="64" name="name" value="">
+            </div>
+
+            <div class="form-group">
+              <label class="inputLabel" for="email">YOUR EMAIL</label>
+              <input type="email" size="25" maxlength="96" name="email" value="">
+            </div>
+          
+            <input type="text" name="daigo" style="display:none;">
+            <input type="hidden" name="notify_me" value="true">
+          </form>
+          <div id="notify-modal-success" style="display:none">
+            <p>You have been successfully subscribed to the Notification List for this product and will therefore receive an e-mail from us when it is back in stock!</p>
+            <p>For security reasons, an e-mail has been sent to you acknowledging your subscription. Please remember that this subscription will not result in you receiving any e-mail from us about anything other than the restocking of this item.</p>
+            <p>If, for any reason, you would like to unsubscribe from the Notification List for this product you will find details of how to do so in the e-mail that has just been sent to you!</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="https://learn.adafruit.com/rgb-led-strips/usage#" id="close-notify" style="display: none" data-dismiss="modal" data-target="#notify-modal">CLOSE</a>
+          <a href="https://learn.adafruit.com/rgb-led-strips/usage#" id="submit-notify" rel="nofollow" class="blue-button">NOTIFY ME</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+      </div>
+        <footer id="adafruit-footer">
+    <div id="footer-content" class="container">
+      <div class="row">
+        <div class=" col-lg-6 col-md-6 col-sm-4 col-xs-12">
+          <nav>
+            <ul>
+              <li><a href="https://www.adafruit.com/contact_us">CONTACT</a></li>
+              <li><a href="https://www.adafruit.com/support">SUPPORT</a>
+              </li><li><a href="https://www.adafruit.com/distributors">DISTRIBUTORS</a></li>
+              <li><a href="https://www.adafruit.com/educators">EDUCATORS</a></li>
+              <li><a href="https://www.adafruit.com/jobs">JOBS</a></li>
+              <li><a href="https://www.adafruit.com/faq">FAQ</a></li>
+              <li><a href="https://www.adafruit.com/shippinginfo/">SHIPPING &amp; RETURNS</a></li>
+              <li><a href="https://www.adafruit.com/terms_of_service/">TERMS OF SERVICE</a></li>
+              <li><a href="https://www.adafruit.com/privacy">PRIVACY &amp; LEGAL</a></li>
+              <li><a href="https://www.adafruit.com/about">ABOUT US</a></li>
+            </ul>
+          </nav>
+          <div id="footer-copyright">
+            <a href="http://nytm.org/made-in-nyc/">ENGINEERED IN NYC</a> <span>Adafruit&nbsp;®</span>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-8 hidden-xs">
+          <div id="footer-quote" class="">
+            "It is not enough to have a good mind; the main thing is to use it well"
+            <span class="quote-author">- <a href="http://en.wikipedia.org/wiki/Ren%C3%A9_Descartes">Rene Descartes</a></span>
+          </div>
+
+        </div>
+        <div id="footer-seals">
+          <img class="img-responsive" src="./Usage _ RGB LED Strips _ Adafruit Learning System_files/seals_2x.jpg" alt="Seals 2x">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    </div>
+  </div>
+
+  <script async="" src="https://www.google-analytics.com/analytics.js"></script><script>
+    window.rails_env = 'production';
+  </script>
+
+      <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-7723544-1', 'auto');  // Replace with your property ID.
+    ga('require', 'ec');
+    ga('send', 'pageview');
+
+    </script>
+    <!-- End Google Analytics -->
+
+      <!-- Google Code for Remarketing Tag -->
+      <!--------------------------------------------------
+      Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+      --------------------------------------------------->
+      <script type="text/javascript">
+      /* <![CDATA[ */
+      var google_conversion_id = 1014834932;
+      var google_custom_params = window.google_tag_params;
+      var google_remarketing_only = true;
+      /* ]]> */
+      </script>
+      <script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion.js">
+      </script>
+      <noscript>
+      &lt;div style="display:inline;"&gt;
+      &lt;img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1014834932/?value=0&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+      &lt;/div&gt;
+      </noscript>
+
+  <script src="./Usage _ RGB LED Strips _ Adafruit Learning System_files/application-f7a3a93d936485387ea294958fd6f265d23d5194d8591b1ff81366e8a40fea10.js.download"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://learn.adafruit.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://learn.adafruit.com/search?q={search_term}",
+        "query-input": "required name=search_term"
+      }
+    }
+  </script>
+
+
+<label id="stefanvdnighttheme" style="left: 25px; bottom: 25px;"><input type="checkbox" id="stefanvdnightthemecheckbox"><span id="stefanvdnightthemeslider"><span class="sun"><span></span></span><span class="night"><span></span></span><span id="sliderblock"><span id="stefanvdnighti" class="turnoffthelightsdrag">≡</span></span></span></label></body></html>
